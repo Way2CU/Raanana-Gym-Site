@@ -69,7 +69,7 @@ section div.discounts article {
 	border-radius: 15px;
 }
 
-section div.discounts article:first-of-type {
+section div.discounts > article {
 	margin-left: 100px;
 }
 
@@ -260,4 +260,36 @@ footer div.copyright a {
 
 footer div.copyright a:hover {
 	color: lighten(@color_blue, 50%);
+}
+
+/*
+ * Tablet
+*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+	section article h1 {
+		font-size: 50px;
+	}
+
+	section div.discounts {
+		padding: 0 1em;
+	}
+
+	section div.discounts > article {
+		margin-left: 60px;
+		padding-left: 185px;
+	}
+
+	section div.discounts article:last-of-type {
+		margin-left: 0;
+	}
+
+	section div.discounts article p:last-of-type {
+		width: 160px;
+	}
+
+	#form_container {
+		padding: 0.5em;
+	}
 }
