@@ -46,6 +46,14 @@
 						/>
 					<p><cms:text constant="at_your_service" /></p>
 				</div>
+
+				<footer>
+					<cms:template file="stock/copyright.xml">
+							<param name="holder" value="copyright_holder"/>
+							<param name="text" value="copyright_text"/>
+							<param name="light" value=""/>
+					</cms:template>
+				</footer>
 		</body>
 	</html>
 </document>
