@@ -36,14 +36,16 @@
 						/>
 				</div>
 
-				<div class="form_container">
+			</section>
+				<div id="form_container">
+					<h3><cms:text constant="fill_details" /></h3>
 					<cms:module
 						name="contact_form"
 						action="show"
 						text_id="contact_form"
 						/>
+					<p><cms:text constant="at_your_service" /></p>
 				</div>
-			</section>
 		</body>
 	</html>
 </document>
