@@ -12,6 +12,8 @@ section {
 	background-size: 812px 550px, 1920px 550px;
 	background-repeat: no-repeat, no-repeat;
 	background-position: calc(~'50% + 300px') top, center top;
+	padding-bottom: 50px;
+	background-color: white;
 }
 
 section > article {
@@ -172,7 +174,6 @@ section div.discounts article p:last-of-type {
 	color: white;
 	background-color: @color_footer;
 	padding: 0.5em calc(~'(100% - 1200px)' / 2);
-	margin-top: 50px;
 }
 
 #form_container h3,
@@ -235,4 +236,28 @@ section div.discounts article p:last-of-type {
 #form_container form div.controls button:hover {
 	background-color: lighten(@color_button, 10%);
 	cursor: pointer;
+}
+
+/*
+ * Footer
+*/
+
+footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+footer div.copyright {
+	background-position: calc(~'50% - 120px') center;
+}
+
+footer div.copyright a {
+	text-decoration: none;
+	color: @color_blue;
+	transition: all 0.3s;
+}
+
+footer div.copyright a:hover {
+	color: lighten(@color_blue, 50%);
 }
