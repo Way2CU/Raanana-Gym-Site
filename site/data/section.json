@@ -1,3 +1,5 @@
 {
-	"/": "home.xml"
+	"/": "gym.xml",
+	"/dance": "dance.xml",
+	"/pool":"pool.xml"
 }

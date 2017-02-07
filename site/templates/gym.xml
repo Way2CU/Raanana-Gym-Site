@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+				<!-- Main article with 2 svg logos inside the template -->
+			<section>
+
+				<!-- Gym link -->
+				<a href="URL::make(array(), 'gym.xml')" cms:eval="href">
+					<cms:text constant="gym" />
+				</a>
+
+				<!-- Pool link -->
+				<a href="URL::make(array(), 'pool.xml')" cms:eval="href">
+					<cms:text constant="pool" />
+				</a>
+
+				<!-- Dance link -->
+				<a href="URL::make(array(), 'dance.xml')" cms:eval="href">
+					<cms:text constant="dance" />
+				</a>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="main"
+					template="parts/article_show.xml"
+				/>
+
+				<!-- Container for discounts -->
+				<div class="discounts">
+					<!-- Right Discount -->
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="discount_right"
+						template="parts/discount.xml"
+						/>
+
+					<!-- Left Discount -->
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="discount_left"
+						template="parts/discount.xml"
+						/>
+				</div>
+
+			</section>
+				<div id="form_container">
+					<h3><cms:text constant="fill_details" /></h3>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						>
+					<transfer name="source" value="חדר כושר"/>
+					</cms:module>
+					<p><cms:text constant="at_your_service" /></p>
+				</div>
+
+				<footer>
+					<cms:template file="stock/copyright.xml">
+							<param name="holder" value="copyright_holder"/>
+							<param name="text" value="copyright_text"/>
+							<param name="light" value=""/>
+					</cms:template>
+				</footer>
+		</body>
+	</html>
+</document>

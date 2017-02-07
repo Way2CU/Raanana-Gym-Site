@@ -8,8 +8,24 @@
 		</head>
 
 		<body>
-			<section>
 				<!-- Main article with 2 svg logos inside the template -->
+			<section class="pool">
+
+				<!-- Gym link -->
+				<a href="URL::make(array(), 'gym.xml')" cms:eval="href">
+					<cms:text constant="gym" />
+				</a>
+
+				<!-- Pool link -->
+				<a href="URL::make(array(), 'pool.xml')" cms:eval="href">
+					<cms:text constant="pool" />
+				</a>
+
+				<!-- Dance link -->
+				<a href="URL::make(array(), 'dance.xml')" cms:eval="href">
+					<cms:text constant="dance" />
+				</a>
+
 				<cms:module
 					name="articles"
 					action="show"
@@ -18,12 +34,12 @@
 				/>
 
 				<!-- Container for discounts -->
-				<div class="discounts">
+				<div class="discounts pool">
 					<!-- Right Discount -->
 					<cms:module
 						name="articles"
 						action="show"
-						text_id="discount_right"
+						text_id="discount_right_pool"
 						template="parts/discount.xml"
 						/>
 
@@ -31,7 +47,7 @@
 					<cms:module
 						name="articles"
 						action="show"
-						text_id="discount_left"
+						text_id="discount_left_pool"
 						template="parts/discount.xml"
 						/>
 				</div>
@@ -43,7 +59,9 @@
 						name="contact_form"
 						action="show"
 						text_id="contact_form"
-						/>
+						>
+					<transfer name="source" value="בריכה"/>
+					</cms:module>
 					<p><cms:text constant="at_your_service" /></p>
 				</div>
 
