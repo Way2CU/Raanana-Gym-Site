@@ -1,4 +1,4 @@
-# Raanana-Gym-Site
+# Raanana-Sport-Site
 
 Resort and sport campus in ranana
 
