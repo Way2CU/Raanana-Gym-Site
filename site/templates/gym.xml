@@ -8,24 +8,47 @@
 		</head>
 
 		<body>
-				<!-- Main article with 2 svg logos inside the template -->
+
 			<section>
+				<!-- Mobile fixed nav -->
+				<cms:mobile>
+					<nav>
+						<!-- Gym link -->
+						<a href="URL::make(array(), 'gym.xml')" cms:eval="href">
+							<cms:text constant="gym" />
+						</a>
 
-				<!-- Gym link -->
-				<a href="URL::make(array(), 'gym.xml')" cms:eval="href">
-					<cms:text constant="gym" />
-				</a>
+						<!-- Pool link -->
+						<a href="URL::make(array(), 'pool.xml')" cms:eval="href">
+							<cms:text constant="pool" />
+						</a>
 
-				<!-- Pool link -->
-				<a href="URL::make(array(), 'pool.xml')" cms:eval="href">
-					<cms:text constant="pool" />
-				</a>
+						<!-- Dance link -->
+						<a href="URL::make(array(), 'dance.xml')" cms:eval="href">
+							<cms:text constant="dance" />
+						</a>
+					</nav>
+				</cms:mobile>
 
-				<!-- Dance link -->
-				<a href="URL::make(array(), 'dance.xml')" cms:eval="href">
-					<cms:text constant="dance" />
-				</a>
+				<!-- Desktop links -->
+				<cms:desktop>
+					<!-- Gym link -->
+					<a href="URL::make(array(), 'gym.xml')" cms:eval="href">
+						<cms:text constant="gym" />
+					</a>
 
+					<!-- Pool link -->
+					<a href="URL::make(array(), 'pool.xml')" cms:eval="href">
+						<cms:text constant="pool" />
+					</a>
+
+					<!-- Dance link -->
+					<a href="URL::make(array(), 'dance.xml')" cms:eval="href">
+						<cms:text constant="dance" />
+					</a>
+				</cms:desktop>
+
+				<!-- Main article with 2 svg logos inside the template -->
 				<cms:module
 					name="articles"
 					action="show"

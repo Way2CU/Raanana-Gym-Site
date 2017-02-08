@@ -8,8 +8,26 @@
 		</head>
 
 		<body>
-				<!-- Main article with 2 svg logos inside the template -->
 			<section class="dance">
+				<!-- Mobile fixed nav -->
+				<cms:mobile>
+					<nav>
+						<!-- Gym link -->
+						<a href="URL::make(array(), 'gym.xml')" cms:eval="href">
+							<cms:text constant="gym" />
+						</a>
+
+						<!-- Pool link -->
+						<a href="URL::make(array(), 'pool.xml')" cms:eval="href">
+							<cms:text constant="pool" />
+						</a>
+
+						<!-- Dance link -->
+						<a href="URL::make(array(), 'dance.xml')" cms:eval="href">
+							<cms:text constant="dance" />
+						</a>
+					</nav>
+				</cms:mobile>
 
 				<!-- Gym link -->
 				<a href="URL::make(array(), 'gym.xml')" cms:eval="href">
@@ -26,12 +44,13 @@
 					<cms:text constant="dance" />
 				</a>
 
+				<!-- Main article with 2 svg logos inside the template -->
 				<cms:module
 					name="articles"
 					action="show"
 					text_id="main"
 					template="parts/article_show.xml"
-				/>
+					/>
 
 				<!-- Container for discounts -->
 				<div class="discounts dance">
