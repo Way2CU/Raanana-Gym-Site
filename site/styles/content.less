@@ -50,11 +50,18 @@ section > a:after {
 	margin-right: 0.5em;
 }
 
+section > a:hover,
+section > a:active {
+	color: @color_red;
+	cursor: pointer;
+}
+
 section > article {
 	display: block;
 	box-sizing: border-box;
 	padding: 1em;
 	margin-left: 50%;
+	padding-bottom: 0;
 }
 
 section > article h1 {
@@ -62,16 +69,20 @@ section > article h1 {
 	font-style: italic;
 	font-weight: 800;
 	font-size: 70px;
+	text-align: center;
+	padding-left: 0.5em;
 }
 
 section > article h2 {
 	margin-top: 0;
+	font-size: 1.6em;
+	padding-right: 0.8em;
 }
 
 section > article p {
-	font-size: 1.3em;
-	font-weight: 300;
-	font-style: italic;
+	font-size: 1em;
+	font-weight: 400;
+	padding-right: 1.2em;
 }
 
 section > article div {
