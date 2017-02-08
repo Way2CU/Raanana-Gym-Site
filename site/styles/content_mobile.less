@@ -6,6 +6,40 @@
  * Authors: Iliya Melishev
  */
 
+section nav {
+	display: block;
+	width: 100%;
+	position: fixed;
+	background-color: @color_mobile_header;
+	z-index: 1000;
+	text-align: center;
+	border-bottom: 1px solid fade(grey, 10%);
+}
+
+section nav a {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	text-decoration: none;
+	padding: 1em;
+	font-size: 1.2em;
+	position: relative;
+}
+
+section > a:active {
+	color: @color_red;
+}
+
+section nav a:after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 1px;
+	height: 1em;
+	background-color: white;
+	margin-right: 0.5em;
+}
+
 section > article {
 	display: block;
 	width: 100%;
@@ -18,6 +52,7 @@ section > article {
 	position: relative;
 	background-color: @color_mobile_header;
 	text-align: center;
+	padding-top: 100px;
 }
 
 section.dance > article {
