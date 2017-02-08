@@ -32,7 +32,6 @@ section.pool {
 
 section nav {
 	padding-left: 55%;
-	text-align: center;
 }
 
 section nav a {
@@ -43,6 +42,7 @@ section nav a {
 	padding: 1em 0 1em 1em;
 	font-size: 1.3em;
 	position: relative;
+	padding-right: 0;
 }
 
 section nav a:after {
@@ -52,7 +52,11 @@ section nav a:after {
 	width: 1px;
 	height: 1em;
 	background-color: white;
-	margin-right: 0.5em;
+	margin-right: 1em;
+}
+
+section nav a:last-of-type:after {
+	display: none;
 }
 
 section nav a:hover,
@@ -67,6 +71,7 @@ section > article {
 	padding: 1em;
 	margin-left: 50%;
 	padding-bottom: 0;
+	padding-right: 0;
 }
 
 section > article h1 {
@@ -74,20 +79,18 @@ section > article h1 {
 	font-style: italic;
 	font-weight: 800;
 	font-size: 70px;
-	text-align: center;
 	padding-left: 0.5em;
 }
 
 section > article h2 {
 	margin-top: 0;
 	font-size: 1.6em;
-	padding-right: 0.8em;
 }
 
 section > article p {
 	font-size: 1em;
 	font-weight: 400;
-	padding-right: 1.2em;
+	padding-right: 2.5em;
 }
 
 section > article div {
@@ -111,6 +114,7 @@ section article div svg .text-color {
 
 section div.discounts {
 	display: block;
+	text-align: center;
 }
 
 section div.discounts article {
@@ -123,8 +127,8 @@ section div.discounts article {
 	border-radius: 15px;
 }
 
-section div.discounts > article {
-	margin-left: 100px;
+section div.discounts > article:first-of-type {
+	margin-left: 120px;
 }
 
 section div.discounts article h3 {

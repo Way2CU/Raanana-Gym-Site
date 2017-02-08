@@ -24,9 +24,10 @@ section nav a {
 	padding: 1em;
 	font-size: 1.2em;
 	position: relative;
+	padding-right: 0;
 }
 
-section > a:active {
+section nav a.active {
 	color: @color_red;
 }
 
@@ -37,7 +38,11 @@ section nav a:after {
 	width: 1px;
 	height: 1em;
 	background-color: white;
-	margin-right: 0.5em;
+	margin-right: 1em;
+}
+
+section nav a:last-of-type:after {
+	display: none;
 }
 
 section > article {
