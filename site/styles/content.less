@@ -30,7 +30,12 @@ section.pool {
 	background-position: calc(~'50% + 300px') top, center top;
 }
 
-section > a {
+section nav {
+	padding-left: 55%;
+	text-align: center;
+}
+
+section nav a {
 	display: inline-block;
 	vertical-align: middle;
 	color: white;
@@ -40,7 +45,7 @@ section > a {
 	position: relative;
 }
 
-section > a:after {
+section nav a:after {
 	content: "";
 	display: inline-block;
 	vertical-align: middle;
@@ -50,8 +55,8 @@ section > a:after {
 	margin-right: 0.5em;
 }
 
-section > a:hover,
-section > a:active {
+section nav a:hover,
+section nav a.active {
 	color: @color_red;
 	cursor: pointer;
 }
